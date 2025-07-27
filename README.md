@@ -1,24 +1,8 @@
 # Data Structures and Algorithms (DSA) Repository
+# Data Structures and Algorithms
 
-Welcome to my Data Structures and Algorithms repository! This repository contains implementations of various data structures and solutions to algorithmic problems.
+A collection of Data Structure implementations and Algorithm solutions in C++. Currently includes Arrays, Strings, and Linked Lists with comprehensive operations like insertion, deletion, and traversal. Each implementation focuses on clean code with proper time and space complexity analysis.
 
-## 📚 Table of Contents
+This repository serves as a learning resource and reference for fundamental DSA concepts. More data structures and algorithms will be added progressively including Stacks, Queues, Trees, and Graph algorithms.
 
-- [About](#about)
-- [Repository Structure](#repository-structure)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [Problem Solutions](#problem-solutions)
-- [Languages Used](#languages-used)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [Resources](#resources)
-
-## 🎯 About
-
-This repository serves as a comprehensive collection of:
-- **Data Structure implementations** - From basic arrays to complex trees and graphs
-- **Algorithm implementations** - Sorting, searching, dynamic programming, and more
-- **Problem solutions** - Solutions to coding problems from various platforms
-- **Learning materials** - Code examples with explanations and complexity analysis
-
+⭐ Star this repo if you find it helpful for your coding journey!

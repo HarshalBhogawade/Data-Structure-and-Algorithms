@@ -1,0 +1,77 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        //better : using hashmp may or maynot be acceptable in interviews
+        //fastlookups tc: O(2*mpseaching*N) ~= O(2N) rarely in case of hashmap
+                //sc = o(N)
+        // unordered_map<ListNode* , int>mp;
+        // ListNode*temp = head;
+        // while(temp){
+        //     if(mp.find(temp->next)!=mp.end()){
+        //         return true;
+        //     }
+        //     mp[temp->next]++;
+        //     temp = temp->next;
+        // }
+        // return false;
+
+        //optimal: tortoise and hare :: slow and fastptrs
+        //self done
+        
+        
+        ListNode* fast = head;
+        ListNode* slow = head;
+        while(fast!=nullptr && fast->next!=nullptr){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow == fast) return true;
+        }
+        return false;   
+    }
+};/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        //better : using hashmp may or maynot be acceptable in interviews
+        //fastlookups tc: O(2*mpseaching*N) ~= O(2N) rarely in case of hashmap
+                //sc = o(N)
+        // unordered_map<ListNode* , int>mp;
+        // ListNode*temp = head;
+        // while(temp){
+        //     if(mp.find(temp->next)!=mp.end()){
+        //         return true;
+        //     }
+        //     mp[temp->next]++;
+        //     temp = temp->next;
+        // }
+        // return false;
+
+        //optimal: tortoise and hare :: slow and fastptrs
+        //self done
+        
+        
+        ListNode* fast = head;
+        ListNode* slow = head;
+        while(fast!=nullptr && fast->next!=nullptr){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow == fast) return true;
+        }
+        return false;   
+    }
+};

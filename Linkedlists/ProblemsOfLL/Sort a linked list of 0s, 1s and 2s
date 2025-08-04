@@ -1,0 +1,46 @@
+/*  Node is defined as
+  struct Node {
+    int data;
+    struct Node *next;
+    Node(int x) {
+        data = x;
+        next = NULL;
+    }
+};*/
+class Solution {
+  public:
+    Node* segregate(Node* head) {
+        // code here
+        Node* zeroD = new Node (0);
+        Node* oneD = new Node(0);
+        Node* twoD = new Node (0);
+        Node* zero = zeroD;
+        Node* one = oneD;
+        Node* two = twoD;
+        
+        if(!head || !head->next) return head;
+        Node* curr = head;
+        while(curr){
+            if(curr->data ==0){
+                zero->next = curr;
+                zero = zero->next;
+            }else if(curr->data == 1){
+                one->next = curr;
+                one = one->next;
+            }else{
+                two->next = curr;
+                two= two->next;
+            }
+            curr = curr->next;
+        }
+        if(oneD->next){
+            zero->next = oneD->next;
+        }else{
+            zero->next = twoD->next;
+        }
+        one->next = twoD->next;
+        two->next = nullptr;
+        head = zeroD->next;
+        return head;
+    }
+};

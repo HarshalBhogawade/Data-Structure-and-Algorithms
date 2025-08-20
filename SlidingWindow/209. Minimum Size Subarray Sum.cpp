@@ -10,11 +10,12 @@ public:
         int ans = INT_MAX;
         int sum = 0;
         while(j<nums.size()){
-            sum = sum + nums[j];
-            while(sum>=target){
+            sum = sum + nums[j]; //as window is expanding we add the num to sum var 
+            while(sum>=target){     //as we satisfied condition of sum = target this now gets smallest subarray whoste sum = target 
                 ans = min(ans , j-i+1);
-                sum = sum - nums[i];
-                i++;
+                sum = sum - nums[i];     // also this step moves the window from back side by removing elem of ith position  once sum < target we exit loop 
+                i++;                       //and again start expanding the window from right side
+        
             } 
             j++;
         }

@@ -1,34 +1,34 @@
-/*
-Use a hashmap to store character frequencies in the current window.
-Expand the window by moving the right pointer and add characters to the map.
-If a character repeats (map size < window size), shrink the window from the left until all characters are unique again.
-At each step, if the window is valid (unique characters), update the maximum length found.
-Continue until the right pointer reaches the end of the string.
+#include <bits/stdc++.h>
+using namespace std;
 
-*/
+int lengthOfLongestSubstring(string s) {
+    // TC: O(n) , SC: O(256) ~ O(1)
 
-class Solution {
-public:
-    int lengthOfLongestSubstring(string s) {
-        int j=0;
-        int i=0;
-        int maxsub = 0;
-        unordered_map<int,int>mp;
-        while(j<s.size()){
-            mp[s[j]]++;
-            if(mp.size()==j-i+1){
-                maxsub = max(maxsub , j-i+1);
-            }else if(mp.size()<j-i+1){
-                while(mp.size()<j-i+1){
-                    mp[s[i]]--;
-                    if(mp[s[i]]==0){
-                        mp.erase(s[i]);
-                    }
-                    i++;
-                }
-            }
-            j++;
+    unordered_map<char,int> mp; // char frequency in window
+    int len = 0, i = 0, j = 0;
+
+    while (j < s.size()) {
+        mp[s[j]]++;  // include current char
+
+        // if all chars unique in window
+        if (mp.size() == j - i + 1) {
+            len = max(len, j - i + 1);
         }
-        return maxsub;
+        // if duplicate found, shrink from left
+        else if (mp.size() < j - i + 1) {
+            while (mp.size() < j - i + 1) {
+                mp[s[i]]--;
+                if (mp[s[i]] == 0) mp.erase(s[i]);
+                i++;
+            }
+        }
+        j++;
     }
-};
+    return len;
+}
+
+int main() {
+    string s = "abcabcbb";
+    cout << lengthOfLongestSubstring(s);
+    return 0;
+}

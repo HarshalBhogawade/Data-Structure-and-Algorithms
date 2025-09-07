@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms",
-      "program": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/build/Debug/outDebug",
+      "cwd": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/Codeforces/Div3-1047",
+      "program": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/Codeforces/Div3-1047/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

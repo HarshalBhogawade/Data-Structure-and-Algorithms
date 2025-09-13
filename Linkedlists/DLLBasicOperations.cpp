@@ -2,17 +2,22 @@
 #include<vector>
 using namespace std;
 
+
+//Node structure of Doubly
 class Node{
     public:
         int data;
         Node* next;
         Node* back;
+
+        //when no need to specifying next and prev pointers
         Node(int data1){
             data = data1;
             next  = nullptr;
             back = nullptr;
         }
-    
+        
+        //while creating dll from array this required
         Node(int data1 , Node* next1 , Node* back1){
             data = data1;
             next  = next1;
@@ -20,6 +25,8 @@ class Node{
         }
 };
 
+
+//converting array to Doubly LL
 Node* ConvertarrtoDll(vector<int> &arr){
     Node* head = new Node(arr[0]);
     Node* prev = head;
@@ -32,18 +39,22 @@ Node* ConvertarrtoDll(vector<int> &arr){
     return head;
 }
 
+//Printing nodes of doubly
 void print(Node* head){
-    while(head != nullptr){
-        cout<<head->data<<" ";
-        head=head->next;
-    } 
+    Node* temp = head;
+    while(temp != nullptr){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
 }
 
+//Deleting head in Dll 
 Node* DeleteheadinDll(Node*head){
     if(head == nullptr || head->next == nullptr){
         return nullptr;
     }
 
+    //unlinking head from first node
     Node* prev = head;
     head = head->next;
     head->back = nullptr;
@@ -53,6 +64,8 @@ Node* DeleteheadinDll(Node*head){
     return head;
 }
 
+
+//Deletion of Tail in Dll
 Node* DeletetailofDll(Node*head){
     if(head == nullptr || head->next == nullptr){
         return nullptr;
@@ -68,6 +81,8 @@ Node* DeletetailofDll(Node*head){
     return head;
 }
 
+
+//De;eting Kth Node in Dll
 Node* DeleteKthNode(Node* head , int k){
     if(head == nullptr || head->next == nullptr){
         return nullptr;
@@ -99,6 +114,7 @@ Node* DeleteKthNode(Node* head , int k){
     return head;
 }
 
+//Deleting Node (means by address , not by value or kth node just by pointer adress)
 void DeleteNodeinDll(Node* temp){
     Node* prev = temp->back;
     Node* Next = temp->next;
@@ -180,7 +196,7 @@ Node* insertbeforekth(Node* head , int val , int k){
     while(temp){
         cnt++;
         if(cnt == k-1){
-            break;
+        break;
         }
         temp= temp->next; 
     }

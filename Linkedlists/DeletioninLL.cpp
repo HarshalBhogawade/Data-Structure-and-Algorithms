@@ -177,8 +177,6 @@ Node* insertbeforeval(Node* head , int el , int val){
     }
 
     Node*temp = head;
-    Node* prev = nullptr;
-
     while(temp->next!=nullptr){
         if(temp->next->data == val){
             Node* temp2 = new Node(el);
@@ -186,11 +184,9 @@ Node* insertbeforeval(Node* head , int el , int val){
             temp->next = temp2;
             break;
         }
-        prev = temp;
         temp = temp->next;
     }
     return head;
-
 }
 
 void print(Node* head){

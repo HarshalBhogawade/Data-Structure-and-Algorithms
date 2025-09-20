@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
     stack<pair<int,int>>st;
     void push(int val) {
         if(st.empty()){
@@ -38,7 +37,6 @@ int main(){
     push(5);
     cout << "After push(5) - Top: " << top() << endl;
     cout << "After push(5) - Min: " << getMin() << endl;
-    
+
     return 0;
 }
-

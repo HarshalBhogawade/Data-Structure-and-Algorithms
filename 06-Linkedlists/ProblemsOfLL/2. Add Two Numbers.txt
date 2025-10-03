@@ -1,0 +1,77 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {       
+        unsigned long long num1 = 0 , num2 =0 , power =1;
+        //selfdone testcases passed :: 1566 / 1569 ;
+        //becaues can handle digits more than 18-19;
+        //only remaining is to solve by carry logic and dummynode
+
+        // ListNode* temp1 = l1;
+        // while(temp1!=nullptr){
+        //     num1 += temp1->val* power;
+        //     power *= 10;
+        //     temp1 = temp1->next;
+        // }
+
+        // ListNode* temp2 = l2;
+        // power=1;
+        // while(temp2!=nullptr){
+        //     num2 += temp2->val* power;
+        //     power *=10;
+        //     temp2 = temp2->next;
+        // }
+
+        // unsigned long long total = num1 + num2;
+        // if(total ==0){
+        //     return new ListNode (0);
+        // }
+        
+        // ListNode* head = nullptr;
+        // ListNode* temp = nullptr;
+        // while(total>0){
+        //     ListNode* newnode = new ListNode(total%10);
+        //     if(head==nullptr){
+        //         head = temp = newnode;
+        //     }else{
+        //         temp->next = newnode;
+        //         temp = newnode;
+        //     }
+        //     total = total/10;
+        // }
+        // return head;
+
+        //dummynode approach 
+
+        
+        ListNode* dum = new ListNode (-1);
+        ListNode* curr = dum;
+        int sum =0;
+        int carry =0;
+        while(l1 || l2){
+            sum = carry;
+            if(l1) sum += l1->val;
+            if(l2) sum += l2->val;
+            ListNode* newnode = new ListNode (sum%10);
+            carry = sum/10;
+            curr->next = newnode;
+            curr = newnode;
+            if(l1) l1 = l1->next;
+            if(l2) l2 = l2->next;
+        }
+        if(carry){
+            ListNode* newn = new ListNode (carry);
+            curr->next = newn;
+        }
+        return dum->next;
+    }
+};

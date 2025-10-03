@@ -55,6 +55,7 @@ public:
     }
 
     // Checks if the stack is empty
+    
     bool isempty()
     {
         return top == -1;

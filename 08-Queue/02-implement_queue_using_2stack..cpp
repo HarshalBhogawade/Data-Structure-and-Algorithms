@@ -7,7 +7,7 @@ class myQueue {
 
 public:
 
-    // Enqueue operation (costly)
+    // Enqueue operation (costly) tc of push is O(N)
     void enqueue(int x) {
         
         // Move all elements from s1 to s2
@@ -26,7 +26,7 @@ public:
         }
     }
 
-    // Dequeue operation
+    // Dequeue operation O(1)
     void dequeue() {
         if (s1.empty()) {
             

@@ -31,12 +31,12 @@ void reverse(vector<int>& arr , int start , int end){
 void reversebyk(vector<int>&arr , int k){
     int n= arr.size();
     k %= n;
-    //left rotate
+    //right rotate
     // reverse(arr,0,k-1);
     // reverse(arr,k,n-1);
     // reverse(arr,0,n-1);
 
-    //right rotate
+    //left rotate
     reverse(arr,0,n-1);
     reverse(arr,0,k-1);
     reverse(arr,k,n-1);

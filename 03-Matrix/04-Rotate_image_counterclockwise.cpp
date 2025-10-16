@@ -21,13 +21,11 @@ vector<vector<int>> rotateanticlockwise(vector<vector<int>>mat){
     vector<vector<int>>res(m,vector<int>(n,0));
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            res[m-j-1][i] = mat[i][j];
+            res[m-1-j][i] = mat[i][j];
         }
     }
     return res;
 }
-
-
 
 int main(){
     vector<vector<int>> mat = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};

@@ -37,7 +37,7 @@ public:
     }
 
     void ms(vector<int>& arr, int low, int high) {
-        if (low >= high) return; // ✅ fixed: should be >= not ==
+        if (low >= high) return;
         int mid = low + (high - low) / 2;
         ms(arr, low, mid);
         ms(arr, mid + 1, high);

@@ -11,6 +11,7 @@ public:
         int left = low;
         int right = mid + 1;
 
+
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp.push_back(arr[left]);
@@ -35,6 +36,7 @@ public:
             arr[i] = temp[i - low];
         }
     }
+
 
     void ms(vector<int>& arr, int low, int high) {
         if (low >= high) return;

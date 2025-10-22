@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/03-Matrix",
-      "program": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/03-Matrix/build/Debug/outDebug",
+      "cwd": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/04-Recursion",
+      "program": "c:/Users/Harshal/.vscode/Data_Structure_and_Algorithms/04-Recursion/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -9,7 +9,6 @@ class spiral{
         int m = mat[0].size();
         int j = 0;
         int i = 0;
-
         while(i<n){
             if(i%2==0){
                 for(j=0;j<m;j++){

@@ -7,7 +7,6 @@ void revcols(vector<vector<int>>& mat){
     int m = mat[0].size();
     for(int j=0;j<m;j++){
         for(int i=0;i<n/2;i++){
-            
             swap(mat[i][j],mat[n-1-i][j]);
         }
     }

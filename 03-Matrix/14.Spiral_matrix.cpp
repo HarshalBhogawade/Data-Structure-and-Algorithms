@@ -25,7 +25,7 @@ vector<int> spiralmatrix(vector<vector<int>>mat){
             ans.push_back(mat[i][right]);
         }
         right--;    //move inward from right
-        
+
         //right to left traversal
         if(top<=bottom){
             for(int i = right;i>=left;i--){

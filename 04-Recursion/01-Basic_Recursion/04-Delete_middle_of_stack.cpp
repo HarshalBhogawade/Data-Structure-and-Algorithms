@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// time complexity = O(N) Sc is O(N) call stack but internally normally no space 
+// time complexity = O(N) Sc is O(N) call stack but internally
 // problem : delete kth element from top of stack
 void deletemiddle(stack<int> &st, int k)
 {

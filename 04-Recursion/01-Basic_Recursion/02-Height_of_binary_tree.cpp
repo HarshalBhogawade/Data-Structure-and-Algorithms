@@ -35,8 +35,6 @@ int main() {
     //   8   18
     //  / \
     // 5   11
-
-
     Node *root = new Node(12);
     root->left = new Node(8);
     root->right = new Node(18);

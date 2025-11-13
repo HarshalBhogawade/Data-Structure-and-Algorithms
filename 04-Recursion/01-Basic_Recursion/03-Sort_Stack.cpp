@@ -4,7 +4,7 @@ using namespace std;
 
 // Insert element into sorted stack
 void sortedInsert(stack<int> &st, int x) {
-  
+
     // If stack is empty or
     // top element is smaller, push x
     if (st.empty() || st.top() <= x) {
@@ -14,7 +14,7 @@ void sortedInsert(stack<int> &st, int x) {
 
     int top = st.top();
     st.pop();
-  
+    
     // Recursively insert x in sorted order
     sortedInsert(st, x);
 
@@ -27,7 +27,7 @@ void sortStack(stack<int> &st) {
 
     int top = st.top();
     st.pop();
-    
+
     // Recursively sort the remaining stack
     sortStack(st);
 

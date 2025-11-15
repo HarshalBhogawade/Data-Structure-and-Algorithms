@@ -39,9 +39,9 @@ double myPow(double x, int n)
     return ans;
 }
 
-//Recursive Approach
+//Recursive Approach tc => O(logn) as every call divides n to n/2 then n/4 then n/8
 double Pow(double x , long nn){
-    
+
     //base case
     if(nn == 0){
         return 1.0;

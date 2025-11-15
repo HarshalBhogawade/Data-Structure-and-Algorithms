@@ -28,7 +28,6 @@ void deletemiddle(stack<int> &st, int stsize, int currentsize)
         return;
     }
     int top = st.top();
-
     st.pop();
 
     currentsize++;

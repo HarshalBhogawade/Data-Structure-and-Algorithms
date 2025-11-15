@@ -7,6 +7,7 @@ void ispalindrome(string &s, int start, int end)
         cout << "Palindrome string" << endl;
         return;
     }
+    
     if (s[start] != s[end])
     {
         cout << "Not Palindrome";

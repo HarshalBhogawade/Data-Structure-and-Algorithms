@@ -7,7 +7,6 @@ void reverse(vector<int>&arr,int start , int end){
     }
 }
 
-
 int main(){
     vector<int>arr = {1,2,3,4,5};
     int start = 0;

@@ -40,14 +40,13 @@ int atoi(string s, int n){
     if(n==0){
         return s[n]-'0';
     }
-
     // Recursive call on remaining string
     int smallernumber = atoi(s,n-1);
 
     //get last character numeric value
     int digit = s[n]-'0';
 
-    //combin 
+    //combin
     return smallernumber * 10 + digit;
 }
 int atoi_recursive(string &s){
@@ -62,7 +61,7 @@ int atoi_recursive(string &s){
     }
 
     string numpart = s.substr(i);
-    
+
     return  sign * atoi(numpart,numpart.size()-1);
 }
 int main(){

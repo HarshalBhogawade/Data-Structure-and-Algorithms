@@ -39,6 +39,7 @@ void strSubsequence(int idx, string temp, string s)
         {
             cout << ch;
         }
+        
         if (temp.size() == 0)
         {
             cout <<"empty";

@@ -77,7 +77,6 @@ int main()
     print(head);
     head = reverseList(head);
     print(head);
-
     // cout<<"Length of linked list : "<<lengthofll(head);
     // cout<<searchanelem(arr,k,head);
     return 0;

@@ -36,7 +36,7 @@ int main()
     vector<int> indices = {0, 5};
     
     vector<int> result = count_NGE(arr, indices);
-    
+
     // Output results
     cout << "Results: ";
     for (int i = 0; i < result.size(); i++)

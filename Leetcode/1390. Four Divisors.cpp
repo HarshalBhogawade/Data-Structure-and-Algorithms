@@ -2,7 +2,6 @@
 using namespace std;
     int divisors(int n){
         vector<int>divsrs;
-        
         for(int i=1;i*i<=n;i++){
             if(n%i==0){
                 divsrs.push_back(i);

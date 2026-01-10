@@ -22,6 +22,7 @@ vector<int>  nextSmallerEle(vector<int> &arr)
     }
     return ans;
 }
+
 int main(){
     vector<int>arr={4, 8, 5, 2, 25};
     vector<int>ans=nextSmallerEle(arr);

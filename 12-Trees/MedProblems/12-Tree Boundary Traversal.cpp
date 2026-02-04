@@ -14,8 +14,6 @@ class Node {
     }
 };
 
-
-
     vector<int>ans;
     
     //is leaf node function 

@@ -29,6 +29,7 @@ Node *insert()
     return root;
 }
 
+//Time complexity -> O(N) n = number of nodes, visited exactly once.
 // inorder : left root right
 void inorder(Node *root)
 {

@@ -51,10 +51,7 @@ Node* deleteMiddle(Node* head) {
             fast = fast->next->next;
         }
         return slow;
-        
-        
 }
-
 
 
 int main(){

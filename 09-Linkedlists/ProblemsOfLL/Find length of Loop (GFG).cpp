@@ -43,7 +43,7 @@ class Solution {
         }
         if(fast == nullptr || fast->next == nullptr) return 0;
         
-        int count =1;
+        int count = 1;
         Node* cnt = slow->next;
         while(cnt!=slow){
             count++;

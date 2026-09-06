@@ -70,6 +70,7 @@ Node* DeletetailofDll(Node*head){
     if(head == nullptr || head->next == nullptr){
         return nullptr;
     }
+
     Node* tail = head;
     while(tail->next != nullptr){
         tail = tail->next;

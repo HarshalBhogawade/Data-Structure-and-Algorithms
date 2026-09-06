@@ -27,7 +27,7 @@ string Postfixtoinfix(string postfix){
 }
 
 int main(){
-    string postfix = "ab+c*";
+    string postfix = "ABC+*";
     string infix = Postfixtoinfix(postfix);
     cout<<"Infix : "<<infix;
     return 0;

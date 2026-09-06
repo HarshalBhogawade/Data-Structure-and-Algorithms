@@ -5,6 +5,8 @@
 4)  Keep dividing n by 2 while n % 2 == 0.
 5)  If finally n == 1, return true; else return false
 */
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
@@ -16,3 +18,10 @@ public:
         return n==1;
     }
 };
+
+int main (){
+    int n; 
+    cin >> n;
+    Solution s;
+    cout << s.isPowerOfTwo(n) << endl;
+}

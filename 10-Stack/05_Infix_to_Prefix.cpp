@@ -71,7 +71,7 @@ string infixtoprefix(const string &infix){
                      res += st.top();
                      st.pop();
                 }
-                st.push(ch);  // Push current operator to stack
+                st.push(ch);// Push current operator to stack
           }
      }
      

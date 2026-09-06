@@ -51,6 +51,6 @@ public:
     return true;
     }
 
-    //ooptimal : najunge
+    //ooptimal : 
     //this optimal still takes o(2N) but while saving space complexity weare making this algorithm complex
 };
